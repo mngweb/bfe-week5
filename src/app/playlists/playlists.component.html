@@ -1,0 +1,101 @@
+
+<div class="row mt-1">
+  <div class="col-xs">
+    <h4>Playlisty</h4>
+
+    <!-- ZAD.4 -->
+    <playlists-list [selected]="selected" (selected)=" select($event) " (deleted)="delete($event)" [playlists]="playlists"></playlists-list>
+    
+    <div class="form-group">
+      <button class="btn btn-success float-xs-right" (click)="createNew($event)">Nowa Playlista</button>
+    </div>
+  </div>
+  <div class="col-xs">
+
+
+    <div [ngSwitch]="mode">
+      <content-card title="Playlista" *ngSwitchDefault>
+          <p>Wybierz <b>playlistę</b>!</p>
+      </content-card>
+
+
+      <content-card title="Playlista {{selected.name}}"  *ngSwitchCase="'selected'">
+        <playlist-detail [playlist]="selected" (editplaylist)=" edit($event)"></playlist-detail>
+      </content-card>
+
+
+      <content-card title="Playlista {{selected.name}} - edycja"  *ngSwitchCase="'edit'">
+         <playlist-form [playlist]="edited" (saved)="save($event)" ></playlist-form>
+      </content-card>
+
+    </div>
+
+ 
+  </div>
+</div>
+
+
+<!-- ZAD.2 -->
+
+<div class="row mt-1">
+  <div class="col-6">
+
+    <!--<input type="checkbox" (change)="showComponent1 = $event.target.checked">-->
+    <input type="checkbox" [(ngModel)]="showComponent1">
+    <div *ngIf="showComponent1">
+      <h1>Komponent 1</h1>
+      <div class="form-group">
+        <label>Nazwa:</label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Utwory:</label>
+        <input type="text"  disabled class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Kolor:</label>
+        <input type="color">
+      </div>
+      <div class="form-group">
+        <label>
+        <input type="checkbox"> 
+        Ulubiona</label>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success float-xs-right">Zapisz</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-6">
+    <!--<input type="checkbox" (change)="hideComponent2 = $event.target.checked">-->
+    <input type="checkbox" [(ngModel)]="hideComponent2">
+    <div [hidden]="hideComponent2">
+      <h1>Komponent 2</h1>
+      <div class="form-group">
+        <label>Nazwa:</label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Utwory:</label>
+        <input type="text"  disabled class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Kolor:</label>
+        <input type="color">
+      </div>
+      <div class="form-group">
+        <label>
+        <input type="checkbox"> 
+        Ulubiona</label>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success float-xs-right">Zapisz</button>
+      </div>
+    </div>
+  
+
+
+
+  </div>
+</div>
