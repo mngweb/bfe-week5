@@ -9,6 +9,7 @@ import { ContentCardComponent } from './playlists/content-card.component';
 import { PlaylistFormComponent } from './playlists/playlist-form.component';
 import { PlaylistsListComponent } from './playlists/playlists-list.component';
 import { PlaylistDetailComponent } from './playlists/playlist-detail.component';
+import { MyComponentComponent } from './playlists/my-component.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PlaylistDetailComponent } from './playlists/playlist-detail.component';
     ContentCardComponent,
     PlaylistFormComponent,
     PlaylistsListComponent,
-    PlaylistDetailComponent
+    PlaylistDetailComponent,
+    MyComponentComponent
   ],
   imports: [
     BrowserModule,

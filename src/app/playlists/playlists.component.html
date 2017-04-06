@@ -40,62 +40,19 @@
 <div class="row mt-1">
   <div class="col-6">
 
+    <h2>Komponent 1</h2>
     <!--<input type="checkbox" (change)="showComponent1 = $event.target.checked">-->
     <input type="checkbox" [(ngModel)]="showComponent1">
-    <div *ngIf="showComponent1">
-      <h1>Komponent 1</h1>
-      <div class="form-group">
-        <label>Nazwa:</label>
-        <input type="text" class="form-control">
-      </div>
-      <div class="form-group">
-        <label>Utwory:</label>
-        <input type="text"  disabled class="form-control">
-      </div>
-      <div class="form-group">
-        <label>Kolor:</label>
-        <input type="color">
-      </div>
-      <div class="form-group">
-        <label>
-        <input type="checkbox"> 
-        Ulubiona</label>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-success float-xs-right">Zapisz</button>
-      </div>
-    </div>
+    <my-component *ngIf="showComponent1">
+    </my-component>
   </div>
   
   <div class="col-6">
+    <h2>Komponent 2</h2>
     <!--<input type="checkbox" (change)="hideComponent2 = $event.target.checked">-->
     <input type="checkbox" [(ngModel)]="hideComponent2">
-    <div [hidden]="hideComponent2">
-      <h1>Komponent 2</h1>
-      <div class="form-group">
-        <label>Nazwa:</label>
-        <input type="text" class="form-control">
-      </div>
-      <div class="form-group">
-        <label>Utwory:</label>
-        <input type="text"  disabled class="form-control">
-      </div>
-      <div class="form-group">
-        <label>Kolor:</label>
-        <input type="color">
-      </div>
-      <div class="form-group">
-        <label>
-        <input type="checkbox"> 
-        Ulubiona</label>
-      </div>
-      <div class="form-group">
-        <button class="btn btn-success float-xs-right">Zapisz</button>
-      </div>
-    </div>
+    <my-component [hidden]="hideComponent2">
+    </my-component>
   
-
-
-
   </div>
 </div>
