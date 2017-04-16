@@ -3,7 +3,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'playlist-form',
   template: `
-        <div> <!-- ZAD.3 -->
+        <div> 
+
+        <!-- ZAD.3 -->
+
         <form (submit)="save(playlist)">
           <div class="form-group">
             <label>Nazwa:</label>
@@ -26,6 +29,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
                     (click)="save(playlist)">Zapisz</button>
           </div>
         </form>
+
         </div>
   `,
   styles: []
