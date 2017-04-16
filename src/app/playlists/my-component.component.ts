@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
       </div>
       <div class="form-group">
         <label>Kolor:</label>
-        <input type="color" name="color">
+        <input type="color" name="color" [(ngModel)]="mycolor">
       </div>
       <div class="form-group">
         <label><input type="checkbox" name="favourite"> 
