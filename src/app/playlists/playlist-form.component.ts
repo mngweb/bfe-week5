@@ -25,8 +25,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
             Ulubiona</label>
           </div>
           <div class="form-group">
-            <button class="btn btn-success float-xs-right" 
-                    (click)="save(playlist)">Zapisz</button>
+            <button class="btn btn-success float-xs-right">Zapisz</button>
+            <!-- <button class="btn btn-success float-xs-right" 
+                    (click)="save(playlist)">Zapisz</button> -->
           </div>
         </form>
 
