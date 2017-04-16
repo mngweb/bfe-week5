@@ -42,7 +42,7 @@
 
     <h2>Komponent 1</h2>
     <!--<input type="checkbox" (change)="showComponent1 = $event.target.checked">-->
-    <input type="checkbox" [(ngModel)]="showComponent1">
+    <label><input type="checkbox" [(ngModel)]="showComponent1">Pokaż komponent</label>
     <my-component *ngIf="showComponent1">
     </my-component>
   </div>
@@ -50,8 +50,8 @@
   <div class="col-6">
     <h2>Komponent 2</h2>
     <!--<input type="checkbox" (change)="hideComponent2 = $event.target.checked">-->
-    <input type="checkbox" [(ngModel)]="hideComponent2">
-    <my-component [hidden]="hideComponent2">
+    <label><input type="checkbox" [(ngModel)]="showComponent2">Pokaż komponent</label>
+    <my-component [hidden]="!showComponent2">
     </my-component>
   
   </div>
