@@ -41,7 +41,7 @@ export class PlaylistsComponent implements OnInit {
 
   edit(playlist){
     this.mode = "edit";
-    this.edited = Object.assign({},playlist);
+    this.edited = playlist;       // ZAD.5
     this.selected = playlist;
   }
 
@@ -60,7 +60,7 @@ export class PlaylistsComponent implements OnInit {
       favourite: false
     };
     this.selected = newPlaylist;
-    this.edited = Object.assign({},newPlaylist);
+    this.edited = newPlaylist;       // ZAD.5
   }
 
   save(playlist){
